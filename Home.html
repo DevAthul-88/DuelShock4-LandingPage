@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>DualShock 4 Wireless Controller</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="./images/logo.png" style="width:100%;"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>DualShock 4 Wireless<br><span>Controller</span></h2>
+                <p>Our most comfortable, intuitive controller ever designed. Now even better, and available in a range of colors and styles.</p>
+                <a href="#">Learn More</a>
+
+               
+                </div>
+                <div class="imgBox">
+                    <img src="./images/img1.png"   class="playstation">
+            </div>
+            
+        </div>
+        <ul class="thumb">
+            <li><img src="./images/img1.png" onclick="imgSlider('./images/img1.png');changeCirecleColor('#4d0080')"></li>
+            <li><img src="./images/img2.png" onclick="imgSlider('./images/img2.png');changeCirecleColor('#d4af37')"></li>
+            <li><img src="./images/img3.png" onclick="imgSlider('./images/img3.png');changeCirecleColor('#579ea0')"></li>
+            <li><img src="./images/img4.png" onclick="imgSlider('./images/img4.png');changeCirecleColor('#00bfff')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="../icons/facebook.png" style="width:40px"></a></li>
+            <li><a href="#"><img src="../icons/instagram.png" style="width:40px"></a></li>
+            <li><a href="#"><img src="../icons/twitter.png" style="width:40px"></a></li>
+            
+        </ul>
+    </section>
+    <script type="text/javascript">
+    function imgSlider(anything){
+        document.querySelector(".playstation").src = anything
+    }
+    function changeCirecleColor(color){
+   const circle = document.querySelector(".circle");
+   circle.style.backgroundColor = color;
+    }
+    function toggleMenu(){
+        var menuToggle = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation');
+        menuToggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+
+    }
+    </script>
+</body>
+</html>
